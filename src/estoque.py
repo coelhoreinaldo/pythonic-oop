@@ -12,7 +12,7 @@ class Estoque:
             self.produtos[nome] += quantidade
             return
 
-        self.produtos = {nome: quantidade}
+        self.produtos[nome] = quantidade
 
     def remover_produto_do_estoque(self, nome: str, quantidade: int) -> None:
         if quantidade > self.produtos[nome]:
@@ -33,4 +33,5 @@ class Estoque:
         self.produtos[nome] = nova_quantidade
 
     def visualizar_estoque(self) -> None:
-        return self.produtos
+        for produto in self.produtos:
+            print(f"{produto}: {self.produtos[produto]}")
