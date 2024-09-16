@@ -7,8 +7,6 @@ def test_cria_livro():
     assert livro.autor == "Haruki Murakami"
     assert livro.paginas == 224
 
-    print(f"{livro.autor} oi tudo bem")
-
 
 def test_livro_repr():
     livro = Livro("Crônica do pássaro de corda", "Haruki Murakami", 608)
