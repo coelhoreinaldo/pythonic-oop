@@ -13,10 +13,10 @@ class Produto:
         self._quantidade = quantidade
 
     def get_preco(self) -> float:
-        pass
+        return self._preco
 
     def get_quantidade(self) -> int:
-        pass
+        return self._quantidade
 
     def atualizar_preco_do_produto(self, novo_preco: float) -> None:
         if novo_preco < 0:
