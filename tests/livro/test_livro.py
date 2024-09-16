@@ -1,5 +1,18 @@
-# from src.livro.livro import Livro
+from src.livro.livro import Livro
 
 
 def test_cria_livro():
-    pass  # Seu teste deve ser escrito aqui
+    livro = Livro("Sul da fronteira, oeste do sol", "Haruki Murakami", 224)
+    assert livro.titulo == "Sul da fronteira, oeste do sol"
+    assert livro.autor == "Haruki Murakami"
+    assert livro.paginas == 224
+
+    print(f"{livro.autor} oi tudo bem")
+
+
+def test_livro_repr():
+    livro = Livro("Crônica do pássaro de corda", "Haruki Murakami", 608)
+    assert (
+        repr(livro)
+        == "O livro Crônica do pássaro de corda de Haruki Murakami possui 608 páginas."
+    )
